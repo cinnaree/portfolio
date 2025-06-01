@@ -1,0 +1,51 @@
+:root {
+  /*Color Palette */
+  --color-bg: #CEE5D6;     /* Light silver background */
+  --color-primary: #307B8E; /*Teal Blue*/
+  --color-secondary: #a9d3c5; /* Pastel blue */
+  --color-accent1: #103A57;  /* Deep prussian blue */
+  --color-accent2: #366B2B;  /* Mughal green */
+
+  /*Font Stack */
+  --font-heading: 'Rampart One', serif;
+  --font-body: 'Rubik', sans-serif;
+}
+
+/*Base Styles */
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/*Headings */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-accent1);
+}
+
+a,p {
+  font-family: var(--font-body);
+  color: var(--color-accent1);
+  margin: 0;
+  padding: 0;
+}
+
+/*Accent use*/
+a, .highlight, .btn {
+  color: var(--color-accent1);
+  text-decoration: none;
+}
+
+a:hover, .btn:hover {
+  color: var(--color-accent2);
+}
+
+/*Section Home Layout*/
+
+
