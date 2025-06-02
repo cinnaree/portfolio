@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rampart+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/965ceed01c.js" crossorigin="anonymous"></script>
+  
 </head>
 <body>
   <nav class="nav">
@@ -26,40 +28,177 @@
 <div class="container">
   <div class="parent">
     <div class="div1">
-      <img src="assets/avatar-nobg.png" alt="Me" id="avatar">
+      <section class="hero-section" id="hero">
+        <div class="hero-content">
+          <img src="/assets/avatar-nobg.png" alt="Your Avatar" class="hero-img" />
+          <div class="hero-text">
+            <h1 class="fade-in">Hi, I'm Cianha</h1>
+            <p class="slide-up">Data Explorer ✨ | Cloud Dreamer ☁️ | Storyteller 🎭</p>
+          </div>
+        </div>
+      </section>
     </div>
 
     <div class="div2">
-      <h1>Hello! I'm Cianha,</h1>
+    <section id="about"></section>
+      <h1>All About Me</h1>
       <p>
         I am a tech-savvy creative currently studying Information Technology.
         I’m currently building my portfolio while exploring data analysis and visualization.
         I’m also working on improving my design skills and diving deeper into real-world coding challenges. </br> </br>
       </p>
-      <p> 🏫 BSIT @ STI College</p>
-      <p> 📍 Based in the Philippines</p>
-      <p> 🌱 Currently learning <span class="highlight">web development</span>, <span class="highlight">data analysis</span>  and <span class="highlight">visualization</span></p>
-      <p> 📫 Reach me @<a href="mailto:ibarrientoscianha@gmail.com" style="margin: 0;">ibarrientoscianha@gmail.com</a></p>
-      <section id="soft-stats">
-        <h3>💬 Soft Stats</h3>
-        <div class="soft-tags">
+      <p> 🏫BSIT @ STI College</p>
+      <p> 📍Based in the Philippines</p>
+      <p> 🌱Currently learning <span class="highlight">web development</span>, <span class="highlight">data analysis</span>  and <span class="highlight">visualization</span></p>
+      <p> 📫Reach me @<a href="mailto:ibarrientoscianha@gmail.com" style="margin: 0;">ibarrientoscianha@gmail.com</a></p>
+      <a href="https://github.com/cinnaree"><i class="fab fa-github" alt="github" style="margin-left: 2.5px;"></i> Cinnaree</a>
+      
+        <section id="soft-stats">
+          <h3>💬 Soft Stats</h3>
+          <div class="soft-tags">
           <span class="tag">#Empathetic</span>
           <span class="tag">#CuriousMind</span>
           <span class="tag">#Creative</span>
           <span class="tag">#AlwaysLearning</span>
           <span class="tag">#ThrivesSoloAndTeam</span>
-        </div>
+        </section>
       </section>
     </div>
 
-    <div class="div3">
-      
-    </div>
+  </div>
 
-    <!--<div class="div4">
-      -->
-    </div>
+  <div class="div3">
+    <section id="skills">
+      <h1>My Skills</h1>
+      <p>Here are some of the skills I have acquired so far:</p>
+      <div class="skill-container">
+        <div class="tool-icons">
+          <p class="tool">
+            <i class="fab fa-html5 fa-3x tool-icon" data-skill="html" alt="html5"></i>
+            HTML
+          </p>
+          <p class="tool">
+            <i class="fab fa-css3-alt fa-3x tool-icon" data-skill="css" alt="css3"></i>
+            CSS
+          </p>
+          <p class="tool">
+            <i class="fab fa-js-square fa-3x tool-icon" data-skill="javascript" alt="javascript"></i>
+            JavaScript
+          </p>
+          <p class="tool">
+            <i class="fab fa-figma fa-3x tool-icon" data-skill="figma" alt="figma"></i>
+            Figma
+          </p>
+          <p class="tool">
+            <i class="fab fa-python fa-3x tool-icon" data-skill="python" alt="python"></i>
+            Python
+          </p>
+          <p class="tool">
+            <i class="fab fa-java fa-3x tool-icon" data-skill="java" alt="java"></i>
+            Java
+          </p>
+          <p class="tool">
+            <i class="fas fa-database fa-3x tool-icon" data-skill="sql" alt="sql"></i>
+            SQL
+          </p>
+          <p class="tool">
+            <i class="fab fa-git fa-3x tool-icon" data-skill="git" alt="git"></i>
+            Git
+          </p>
+          <p class="tool">
+            <i class="fab fa-github fa-3x tool-icon" data-skill="github" alt="github"></i>
+            GitHub
+          </p>
+          <p class="tool">
+            <img src="assets/icons/icons8-canva.svg" data-skill="canva" alt="canva" class="tool-icon">
+            Canva
+          </p>
+          <p class="tool">
+            <img src="assets/icons/icons8-visual-studio.svg" data-skill="vstudio" alt="vstudio" class="tool-icon">
+            Visual Studio
+          </p>
+          <p class="tool">
+            <img src="assets/icons/icons8-visual-studio-code-2019.svg" data-skill="vscode" alt="vscode" class="tool-icon" style="scale: 1.2;">
+            Visual Studio Code
+          </p>
+          <p class="tool">
+            <i class="fas fa-file-word fa-3x tool-icon" data-skill="word" alt="word"></i>
+            MS Word
+          </p>
+          <p class="tool">
+            <i class="fas fa-file-powerpoint fa-3x tool-icon" data-skill="powerpoint" alt="powerpoint"></i>
+            MS PowerPoint
+          </p>
+          <p class="tool">
+            <i class="fas fa-file-excel fa-3x tool-icon" data-skill="excel" alt="excel"></i>
+            MS Excel
+          </p>
+        </div>
+
+        <div class="skill-tags">
+          <div class="skill-tag" data-linked="html css javascript" data-category="dev">Web Development</div>
+          <div class="skill-tag" data-linked="css" data-category="design">Web Design</div>
+          <div class="skill-tag" data-linked="figma javascript html css" data-category="design">UI/UX Design</div>
+          <div class="skill-tag" data-linked="figma" data-category="design">Prototyping</div>
+          <div class="skill-tag" data-linked="figma" data-category="design">Wireframing</div>
+          <div class="skill-tag" data-linked="html css" data-category="dev">Responsive Design</div>
+          <div class="skill-tag" data-linked="javascript" data-category="dev">Web Interactivity</div>
+          <div class="skill-tag" data-linked="python java" data-category="programming">OOP</div>
+          <div class="skill-tag" data-linked="python java" data-category="programming">Programming Fundamentals</div>
+          <div class="skill-tag" data-linked="vstudio vscode" data-category="tooling">IDE Proficiency</div>
+          <div class="skill-tag" data-linked="sql" data-category="data">Database Management</div>
+          <div class="skill-tag" data-linked="sql" data-category="data">Data Querying</div>
+          <div class="skill-tag" data-linked="git github" data-category="tooling">Version Control</div>
+          <div class="skill-tag" data-linked="vscode vstudio" data-category="tooling">Version Control Integration</div>
+          <div class="skill-tag" data-linked="github canva" data-category="collaboration">Collaboration</div>
+          <div class="skill-tag" data-linked="git github" data-category="tooling">Source Code Management</div>
+          <div class="skill-tag" data-linked="github" data-category="tooling">Git Workflow</div>
+          <div class="skill-tag" data-linked="word" data-category="writing">Document Creation</div>
+          <div class="skill-tag" data-linked="word" data-category="writing">Technical Documentation</div>
+          <div class="skill-tag" data-linked="word excel" data-category="writing">Formatting</div>
+          <div class="skill-tag" data-linked="canva" data-category="design">Graphic Design</div>
+          <div class="skill-tag" data-linked="powerpoint" data-category="design">Presentation Design</div>
+          <div class="skill-tag" data-linked="powerpoint canva" data-category="design">Visual Communication</div>
+          <div class="skill-tag" data-linked="excel" data-category="data">Data Analysis</div>
+          <div class="skill-tag" data-linked="excel" data-category="data">Spreadsheet Management</div>
+          <div class="skill-tag" data-linked="excel" data-category="data">Data Visualization</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="div4">
+    <section id="projects" class="project-section">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card in-progress">
+          <h3>My Portfolio</h3>
+          <p>A fun, RPG-styled personal website built with HTML, CSS, and JS.</p>
+          <span class="tags">#Personal</span>
+
+          <span class="badge">🛠 In Progress</span>
+        </div>
+        
+        <div class="project-card concept">
+          <h3>Pixilated Tamagotchi</h3>
+          <p>A planned interactive dashboard to visualize student performance using Chart.js and Python.</p>
+          <span class="tags">#Data</span>
+
+          <span class="badge">💡 Planned</span>
+        </div>
+
+        <div class="project-card concept">
+          <h3>Tally</h3>
+          <p>A planned interactive dashboard to visualize student performance using Chart.js and Python.</p>
+          <span class="tags">#Concept</span>
+          <span class="badge">💡 Planned</span>
+        </div>
+      </div>
+    </section>
+
   </div>
 </div>
+
+
 </body>
 </html>

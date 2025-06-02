@@ -95,6 +95,52 @@ a:hover, .btn:hover {
   border-bottom-right-radius: 45px;
 }
 /*Styles*/
+.nav {
+  background-color: var(--color-secondary);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--color-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-links li {
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1.2rem;
+}
+
+.nav-links li:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links li a {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-family: var(--font-body);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-links li:hover a {
+  color: white;
+}
+
 .highlight{
   transition: 0.5s ease;
 }
@@ -144,51 +190,6 @@ a:hover, .btn:hover {
   cursor: pointer;
 }
 
-.nav {
-  background-color: var(--color-secondary);
-  padding: 1rem 2rem;
-  border-bottom: 2px solid var(--color-primary);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.nav-links li {
-  background-color: var(--color-bg);
-  border: 2px solid var(--color-primary);
-  border-radius: 999px;
-  transition: all 0.3s ease;
-  padding: 0.5rem 1.2rem;
-}
-
-.nav-links li:hover {
-  background-color: var(--color-primary);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.nav-links li a {
-  color: var(--color-primary);
-  font-weight: 600;
-  font-family: var(--font-body);
-  text-decoration: none;
-  display: inline-block;
-}
-
-.nav-links li:hover a {
-  color: white;
-}
 
 
 /*Buttons */
