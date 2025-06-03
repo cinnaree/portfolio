@@ -225,18 +225,31 @@
 
   <div class="div5">
     <section id="contact" class="contact-section">
-      <!--<div class="message-card">
-        <form method="POST" action="https://api.web3forms.com/submit">
-          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message..." rows="4" required></textarea>
-          <div class="h-captcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
-          <button type="submit">📮 Send</button>
-        </form>
-      </div>-->
+        <h2>📮 Send a Message</h2>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <!-- Front of card -->
+              <div class="flip-card-front" id="flipToBack">
+                <p>Whether it's a feedback, collaboration, or a question — I'd love to hear from you! ✨</p>
+              </div>
+
+              <!-- Back of card -->
+              <div class="flip-card-back" id="flipToFront">
+                <form method="POST" action="https://api.web3forms.com/submit">
+                  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+                  <input type="text" name="name" placeholder="Your Name" required>
+                  <input type="email" name="email" placeholder="Your Email" required>
+                  <textarea name="message" placeholder="Your Message..." rows="4" required></textarea>
+
+                  <div class="h-captcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+                  <button type="submit">📨 Send</button>
+                </form>
+              </div>
+            </div>
+          </div>
     </section>
-  </div>
+  </div>  
 
   <footer class="footer">
     <p>© 2023 Cianha Ibarrientos. All rights reserved.</p>

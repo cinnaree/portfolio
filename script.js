@@ -41,7 +41,7 @@ document.querySelectorAll(".close-modal").forEach(button => {
   });
 });
 
-// Optional: Close modal when clicking outside
+//Close modal when clicking outside
 document.querySelectorAll(".modal-overlay").forEach(overlay => {
   overlay.addEventListener("click", e => {
     if (e.target === overlay) {
@@ -49,6 +49,20 @@ document.querySelectorAll(".modal-overlay").forEach(overlay => {
     }
   });
 });
+
+/*Card-flip (contact)*/
+const card = document.querySelector(".flip-card");
+const flipToBack = document.getElementById("flipToBack");
+const flipToFront = document.getElementById("flipToFront");
+
+flipToBack.addEventListener("click", () => {
+  card.classList.add("flipped");
+});
+
+flipToFront.addEventListener("click", () => {
+  card.classList.remove("flipped");
+});
+
 
 
 

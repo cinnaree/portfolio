@@ -515,131 +515,90 @@ footer {
 
 /*Contact Form*/
 .contact-section {
+  padding: 4rem 2rem;
+  background-color: var(--color-secondary);
   text-align: center;
-  padding: 5rem 2rem;
 }
 
-.contact-section h2 {
-  font-family: var(--font-heading);
-  color: var(--color-accent1);
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 2rem auto;
 }
 
-.contact-section p {
-  font-family: var(--font-body);
-  color: var(--color-primary);
-  margin-bottom: 2rem;
-}
-
-.envelope-container {
-  display: flex;
-  justify-content: center;
+.flip-card-inner {
   position: relative;
-  padding: 3rem 1rem;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
 }
 
-.envelope {
-  position: relative;
-  width: 560px;
-  height: 300px;
-  background-color: #88a988;
-  border-radius: 12px;
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  background-color: var(--color-bg);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* Envelope lid effect */
-.lid-one {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 60%;
-  background-color: #accaac;
-  clip-path: polygon(0 0, 50% 100%, 100% 0);
-  border-radius: 12px;
-  z-index: 2;
+.flip-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.lid-two {
-  position: absolute;
-  width: 100%;
-  height: 60%;
-  background-color: #658365;
-  clip-path: polygon(0 0, 50% 100%, 100% 0);
-  transform: rotateX(180deg);
-  z-index: 1;
-}
-
-.envelope-front {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60%;
-  background-color: #88a988;
-  border-top: 2px solid #658365 ;
-  border-bottom: 2px solid #658365;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  clip-path: polygon(0 0, 50% 100%, 100% 0);
-  transform: rotateX(180deg);
-  z-index: 4;
-}
-
-/* Scroll/Form inside envelope */
-.scroll-form {
-  position: absolute;
-  width: 80%;
-  background-color: #fff;
-  border: 2px solid var(--color-primary);
-  border-radius: 16px;
-  padding: 2rem;
-  z-index: 3;
-  opacity: 1;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  transition: all 0.8s ease;
-  object-fit: contain;
-}
-
-/* Show it! */
-.scroll-form.show {
-  bottom: 20px;
-  animation: slideUp ease 1s 0.5s forwards;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  to { opacity: 1; transform: translateY(40px); }
-}
-
-.scroll-form input,
-.scroll-form textarea {
-  width: 75%;
-  margin: 0.8rem 0;
-  padding: 0.8rem 1rem;
-  border: 2px solid var(--color-primary);
-  border-radius: 8px;
+.flip-card-front p {
   font-family: var(--font-body);
+  color: var(--color-accent1);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card-back form {
+  display: flex;
+  flex-direction: column;
+}
+
+.flip-card-back input,
+.flip-card-back textarea {
+  margin-bottom: 0.8rem;
+  padding: 0.8rem 1rem;
+  font-family: var(--font-body);
+  border: 2px solid var(--color-primary);
+  border-radius: 10px;
   font-size: 1rem;
 }
 
-.scroll-form button {
-  margin-top: 1rem;
+.flip-card-back button {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-heading);
   background-color: var(--color-accent2);
   color: white;
-  border: none;
-  padding: 0.8rem 2rem;
-  font-family: var(--font-heading);
-  border-radius: 999px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.scroll-form button:hover {
+.flip-card-back button:hover {
   background-color: var(--color-accent1);
 }
 
@@ -648,6 +607,7 @@ footer {
   transform: scale(0.9);
   transform-origin: center;
 }
+
 
 
 
