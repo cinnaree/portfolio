@@ -1,3 +1,5 @@
+
+/*Skills*/
 const toolIcons = document.querySelectorAll(".tool-icon");
 const skillTags = document.querySelectorAll(".skill-tag");
 
@@ -21,3 +23,32 @@ toolIcons.forEach(icon => {
     skillTags.forEach(tag => tag.classList.remove("highlighted"));
   });
 });
+
+/*View Project*/
+
+// Open modal
+document.querySelectorAll(".open-modal").forEach(button => {
+  button.addEventListener("click", () => {
+    const modalId = button.dataset.modal;
+    document.getElementById(modalId).classList.add("active");
+  });
+});
+
+// Close modal
+document.querySelectorAll(".close-modal").forEach(button => {
+  button.addEventListener("click", () => {
+    button.closest(".modal-overlay").classList.remove("active");
+  });
+});
+
+// Optional: Close modal when clicking outside
+document.querySelectorAll(".modal-overlay").forEach(overlay => {
+  overlay.addEventListener("click", e => {
+    if (e.target === overlay) {
+      overlay.classList.remove("active");
+    }
+  });
+});
+
+
+
