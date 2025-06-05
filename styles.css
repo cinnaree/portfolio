@@ -184,7 +184,7 @@ footer {
   justify-content: center;
   flex-direction: column;
   background-color: var(--color-bg);
-  background-image:url(assets/img/hero-bg.png);
+  background-image:url('assets/img/hero-bg.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
