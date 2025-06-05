@@ -656,6 +656,10 @@ footer {
       
     }
 
+    textarea {
+      resize: vertical;
+    }
+
     button {
       background-color: #307B8E;
       color: white;
