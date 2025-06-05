@@ -105,13 +105,15 @@ a:hover, .btn:hover {
   color: white;
 }
 
-/* Active nav link style */
 .nav-links li.active {
   background-color: var(--color-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links li.active a {
   color: white !important;
+  font-weight: 700;
 }
 
 /*Images*/
@@ -132,8 +134,8 @@ a:hover, .btn:hover {
   padding: min(2em, 8%);
 }
 
-.section{
-  scroll-margin-top: min(5rem, 10%);
+section[id] {
+  scroll-margin-top: 100px;
 }
 
 .div2{

@@ -50,51 +50,58 @@ document.querySelectorAll(".modal-overlay").forEach(overlay => {
   });
 });
 
-/* Smooth scrolling for navigation links */
+/* Enhanced Smooth scrolling for navigation links */
 document.querySelectorAll('.nav-links a').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
-    e.preventDefault(); // Prevent default anchor behavior
+    e.preventDefault();
     
     const targetId = this.getAttribute('href');
     const targetElement = document.querySelector(targetId);
     
     if (targetElement) {
-      // Calculate the position to scroll to (accounting for fixed nav height)
       const navHeight = document.querySelector('.nav').offsetHeight;
-      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
       
-      // Smooth scroll to the target
       window.scrollTo({
         top: targetPosition,
         behavior: 'smooth'
       });
       
       // Update URL without jumping
-      history.pushState(null, null, targetId);
+      if (history.pushState) {
+        history.pushState(null, null, targetId);
+      } else {
+        window.location.hash = targetId;
+      }
     }
   });
 });
 
-/* Highlight active nav link while scrolling */
-window.addEventListener('scroll', () => {
-  const sections = document.querySelectorAll('section');
+/* Improved Active Section Tracking */
+function setActiveNavLink() {
+  const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
-  
-  let current = '';
+  let currentSection = '';
   
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
+    const sectionId = section.getAttribute('id');
     
-    if (pageYOffset >= (sectionTop - 100)) {
-      current = section.getAttribute('id');
+    if (window.scrollY >= (sectionTop - 150) && 
+        window.scrollY < (sectionTop + sectionHeight - 150)) {
+      currentSection = sectionId;
     }
   });
   
   navLinks.forEach(link => {
     link.parentElement.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
+    if (link.getAttribute('href') === `#${currentSection}`) {
       link.parentElement.classList.add('active');
     }
   });
-});
+}
+
+// Run on initial load and scroll
+window.addEventListener('load', setActiveNavLink);
+window.addEventListener('scroll', setActiveNavLink);
