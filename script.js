@@ -50,11 +50,51 @@ document.querySelectorAll(".modal-overlay").forEach(overlay => {
   });
 });
 
-/*Card-flip (contact)*/
-contactForm.addEventListener("submit", (e) => {
-  setTimeout(() => {
-    card.classList.remove("flipped");
-    frontMessage.textContent = "💌 Thank you for reaching out! I'll get back to you soon.";
-  }, 1000); // Optional: simulate delay for smoother experience
+/* Smooth scrolling for navigation links */
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    
+    if (targetElement) {
+      // Calculate the position to scroll to (accounting for fixed nav height)
+      const navHeight = document.querySelector('.nav').offsetHeight;
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+      
+      // Smooth scroll to the target
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+      
+      // Update URL without jumping
+      history.pushState(null, null, targetId);
+    }
+  });
 });
 
+/* Highlight active nav link while scrolling */
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  
+  let current = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    
+    if (pageYOffset >= (sectionTop - 100)) {
+      current = section.getAttribute('id');
+    }
+  });
+  
+  navLinks.forEach(link => {
+    link.parentElement.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.parentElement.classList.add('active');
+    }
+  });
+});
