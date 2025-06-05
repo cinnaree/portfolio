@@ -52,15 +52,24 @@ document.querySelectorAll(".modal-overlay").forEach(overlay => {
 
 /*Card-flip (contact)*/
 const card = document.querySelector(".flip-card");
-const flipToBack = document.getElementById("flipToBack");
-const flipToFront = document.getElementById("flipToFront");
+const flipToBackBtn = document.getElementById("flipToBack");
+const flipToFrontBtn = document.getElementById("flipToFront");
+const contactForm = document.getElementById("contactForm");
+const frontMessage = document.getElementById("frontMessage");
 
-flipToBack.addEventListener("click", () => {
+flipToBackBtn.addEventListener("click", () => {
   card.classList.add("flipped");
 });
 
-flipToFront.addEventListener("click", () => {
+flipToFrontBtn.addEventListener("click", () => {
   card.classList.remove("flipped");
+});
+
+contactForm.addEventListener("submit", (e) => {
+  setTimeout(() => {
+    card.classList.remove("flipped");
+    frontMessage.textContent = "💌 Thank you for reaching out! I'll get back to you soon.";
+  }, 1000); // Optional: simulate delay for smoother experience
 });
 
 
