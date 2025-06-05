@@ -15,10 +15,10 @@
 <body>
   <nav class="nav">
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
 <div class="container">
@@ -29,7 +29,7 @@
           <img src="assets/img/avatar-nobg.png" alt="Your Avatar" class="hero-img" />
           <div class="hero-text">
             <h1 class="fade-in">Hi, I'm Cianha</h1>
-            <p class="slide-up">BSIT Student | Programming Major | Emerging Tech Professional</p>
+            <p class="slide-up">BSIT Student | Programming Major</p>
           </div>
         </div>
       </section>
@@ -52,7 +52,7 @@
           <h3>
             WEBFOLIO
           </h3>
-          <a href="#"></a>
+          <a href="https://cinnaree.github.io/portfolio/">🔗 Link</a>
         </div>
         
         <div class="soft-stats">
@@ -101,7 +101,7 @@
   <div class="div3">
     <section id="skills">
       <h1>Skills & Tools </h1>
-      <p><strong>Here are some of the skills I have acquired so far:</strong></p>
+      <p><strong>Here are some of the skills I have acquired so far along with the tools I am familiar with:</strong></p>
       <div class="skill-container">
         <div class="tool-icons">
           <p class="tool">
@@ -141,18 +141,6 @@
             GitHub
           </p>
           <p class="tool">
-            <img src="assets/icons/icons8-canva.svg" data-skill="canva" alt="canva" class="tool-icon">
-            Canva
-          </p>
-          <p class="tool">
-            <img src="assets/icons/icons8-visual-studio.svg" data-skill="vstudio" alt="vstudio" class="tool-icon">
-            Visual Studio
-          </p>
-          <p class="tool">
-            <img src="assets/icons/icons8-visual-studio-code-2019.svg" data-skill="vscode" alt="vscode" class="tool-icon" style="scale: 1.2;">
-            Visual Studio Code
-          </p>
-          <p class="tool">
             <i class="fas fa-file-word fa-2x tool-icon" data-skill="word" alt="word"></i>
             MS Word
           </p>
@@ -176,20 +164,19 @@
           <div class="skill-tag" data-linked="javascript" data-category="dev">Web Interactivity</div>
           <div class="skill-tag" data-linked="python java" data-category="programming">OOP</div>
           <div class="skill-tag" data-linked="python java" data-category="programming">Programming Fundamentals</div>
-          <div class="skill-tag" data-linked="vstudio vscode python java" data-category="tooling">IDE Proficiency</div>
+          <div class="skill-tag" data-linked="python java" data-category="tooling">IDE Proficiency</div>
           <div class="skill-tag" data-linked="sql" data-category="data">Database Management</div>
           <div class="skill-tag" data-linked="sql" data-category="data">Data Querying</div>
           <div class="skill-tag" data-linked="git github" data-category="tooling">Version Control</div>
-          <div class="skill-tag" data-linked="vscode vstudio" data-category="tooling">Version Control Integration</div>
-          <div class="skill-tag" data-linked="github canva" data-category="collaboration">Collaboration</div>
+          <div class="skill-tag" data-linked="github" data-category="tooling">Version Control Integration</div>
+          <div class="skill-tag" data-linked="github" data-category="collaboration">Collaboration</div>
           <div class="skill-tag" data-linked="git github" data-category="tooling">Source Code Management</div>
           <div class="skill-tag" data-linked="github" data-category="tooling">Git Workflow</div>
           <div class="skill-tag" data-linked="word" data-category="writing">Document Creation</div>
           <div class="skill-tag" data-linked="word" data-category="writing">Technical Documentation</div>
           <div class="skill-tag" data-linked="word excel" data-category="writing">Formatting</div>
-          <div class="skill-tag" data-linked="canva" data-category="design">Graphic Design</div>
           <div class="skill-tag" data-linked="powerpoint" data-category="design">Presentation Design</div>
-          <div class="skill-tag" data-linked="powerpoint canva" data-category="design">Visual Communication</div>
+          <div class="skill-tag" data-linked="powerpoint" data-category="design">Visual Communication</div>
           <div class="skill-tag" data-linked="excel" data-category="data">Data Analysis</div>
           <div class="skill-tag" data-linked="excel" data-category="data">Spreadsheet Management</div>
           <div class="skill-tag" data-linked="excel" data-category="data">Data Visualization</div>
@@ -284,34 +271,17 @@
 
   <div class="div5">
     <section id="contact" class="contact-section">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          
-          <!-- FRONT SIDE -->
-          <div class="flip-card-front">
-            <h2>📮 Send a Message</h2>
-            <p id="frontMessage">Whether it's feedback, a collab idea, or a random hello — I'd love to hear from you! ✨</p>
-            <button id="flipToBack" class="flip-btn">💬 Write Message</button>
-          </div>
-          
-          <!-- BACK SIDE -->
-          <div class="flip-card-back">
-            <button id="flipToFront" class="flip-btn-back">← Back</button>
-            <form id="contactForm" method="POST" action="https://api.web3forms.com/submit">
-              <input type="hidden" name="access_key" value="c10d1459-240e-40ff-b147-a99ae54fff5e">
-              
-              <input type="text" name="name" placeholder="Your Name" required>
-              <input type="email" name="email" placeholder="Your Email" required>
-              <textarea name="message" placeholder="Your Message..." rows="4" required></textarea>
-              
-              <button type="submit">📨 Send</button>
-            </form>
-          </div>
-          
+      <div class="contact-card">
+          <h2>Send a Message 💌</h2>
+          <p>Whether it's a feedback, collab, or a question - I'd be happy to hear from you!❤️</p>
+          <form class="contact-form" action="https://formspree.io/f/mjvowzqk" method="POST">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+          </form>
         </div>
-      </div>
     </section>
-
   </div>
 </div>
 
